@@ -1,0 +1,37 @@
+<html>
+<body>
+    <div class="login">
+       <h1>FWI Prediction</h1>
+   
+        <!-- Main Input For Receiving Query to our ML -->
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+         <input type="text" name="Temperature" placeholder="Temperature" required="required" /><br>
+           <input type="text" name="RH" placeholder="RH" required="required" /><br>
+           <input type="text" name="Ws" placeholder="Ws" required="required" /><br>
+           <input type="text" name="Rain" placeholder="Rain" required="required" /><br>
+           <input type="text" name="FFMC" placeholder="FFMC" required="required" /><br>
+           <input type="text" name="DMC" placeholder="DMC" required="required" /><br>
+           <input type="text" name="ISI" placeholder="ISI" required="required" /><br>
+           <input type="text" name="Classes" placeholder="Classes" required="required" /><br>
+           <input type="text" name="Region" placeholder="Region" required="required" /><br>
+           <pre>
+            Temp : temperature noon (temperature max) in Celsius degrees: 22 to 42<br>
+            RH : Relative Humidity in %: 21 to 90<br>
+            Ws :Wind speed in km/h: 6 to 29<br>
+            Rain: total day in mm: 0 to 16.8 FWI Components<br>
+            Fine Fuel Moisture Code (FFMC) index from the FWI system: 28.6 to 92.5<br>
+            Duff Moisture Code (DMC) index from the FWI system: 1.1 to 65.9<br>
+            Initial Spread Index (ISI) index from the FWI system: 0 to 18.5<br>
+            Classes: two classes, not fire is 0 and fire is 1<br>
+            Region: can be 0 =Bejaia Region or 1=Sidi-Bel Abbes Region<br>
+           </pre>
+   
+   
+   
+           <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+    <h2>
+       THE FWI prediction is {{result}}
+    </h2>
+   <body>
+</html>
