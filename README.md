@@ -1,1 +1,1 @@
-
+The Algerian Forest Fires Prediction Project is a web app that uses environmental data and Ridge Regression to predict fire risks in Algeria. Users input conditions like temperature, humidity, and wind speed to get fire risk predictions via a Flask interface.
